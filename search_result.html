@@ -1,0 +1,27 @@
+<title>Books Management</title>
+<style type="text/css">
+<!--
+.STYLE3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+.STYLE4 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+}
+-->
+</style>
+<p align="center" class="STYLE4">Books Management</p>
+<p><span class="STYLE3">You searched for: <strong>{{ q }}</strong></span>.</p>
+{% if book %}
+<p class="STYLE3">Found {{ book|length }} book{{ book|pluralize }}.</p>
+<ul>
+{% for book in book %}
+<li><span class="STYLE3"><a href="information/?book_title={{ book.Title }}">{{ book.Title }}
+
+</a>&nbsp;&nbsp;&nbsp;<a href="delete/?booktitle={{ book.Title }}">Delete</a></span></li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="STYLE3 color: red; STYLE7">No book matched your search criteria.</p>
+{% endif %}

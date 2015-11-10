@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Books Management</title>
+<style type="text/css">
+<!--
+.STYLE2 {
+	font-size: 36px;
+	font-family: "Times New Roman", Times, serif;
+}
+.STYLE4 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+-->
+</style>
+</head>
+
+<body>
+<p align="center" class="STYLE2">Books Management</p>
+{% if error %}
+<p class="STYLE4">Please submit a search term.</p>
+{% endif %}
+<form action="/search_result/" method="get">
+  <input type="text" name="q">
+  <input name="submit" type="submit" value="search">
+</form>
+<a href="summary/"><span class="STYLE4">Information Summary</span><br>    
+<a href="add_form/"><span class="STYLE4">Add Book</span>
+</body>
+</html>

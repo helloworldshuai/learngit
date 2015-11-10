@@ -1,0 +1,45 @@
+<html>
+<head>    
+<title>Books Management</title> 
+<style type="text/css">
+<!--
+.STYLE2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 36px;
+}
+.STYLE3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+.STYLE12 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+}
+-->
+</style>
+</head> 
+<body>
+
+<p align="center" class="STYLE2">Books Management </p>
+<p class="STYLE12">Authors:</p>
+<hr>
+<p>{% for author in authors %}</p>
+<p class="STYLE3">AuthorID:{{ author.AuthorID }}</p>
+<p class="STYLE3">Name:{{ author.Name }}</p>
+<p class="STYLE3">Age:{{ author.Age }}</p>
+<p class="STYLE3">Country:{{ author.Country }}</p>
+<hr/>
+<p>{% endfor %}</p>
+<p class="STYLE12">Books:</p>
+<hr>
+<p>{% for book in books %} </p>
+<p class="STYLE3">ISBN:{{ book.ISBN }}</p>
+<p class="STYLE3">Title:{{ book.Title }}</p>
+<p class="STYLE3">AuthorID:{{ book.AuthorID }}</p>
+<p class="STYLE3">Publisher:{{ book.Publisher }}</p>
+<p class="STYLE3">Publishdate:{{ book.Publishdate }}</p>
+<p class="STYLE3">Price:{{ book.Price }}</p>
+<hr/>
+{% endfor %}       
+</body> 
+</html>    
